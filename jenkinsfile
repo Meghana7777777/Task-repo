@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+
+    environment {
+        EC2_IP = '13.232.192.172'
+        SSH_USER = 'ubuntu'
+        SSH_KEY = credentials('Practice-key.pem') // Replace with your Jenkins credential ID for the SSH private key
+    }
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git branch: 'deploy', url: 'https://github.com/Meghana7777777/Task-repo.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        
+        stage('Deploy to EC2') {
+            steps {
+                script {
+                    sh """
+                    ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} ${SSH_USER}@${EC2_IP} <<EOF
+                    cd /home/ubuntu/nodejs || { mkdir -p /home/ubuntu/nodejs && cd /home/ubuntu/nodejs; }
+                    git pull origin deploy
+                    npm install
+                    pm2 restart all || pm2 start tblItemController.js
+                    exit
+                    EOF
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment succeeded!'
+        }
+        failure {
+            echo 'Deployment failed!'
+        }
+    }
+}
