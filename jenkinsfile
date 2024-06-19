@@ -10,26 +10,29 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
+                echo 'Cloning repository...'
                 git branch: 'deploy', url: 'https://github.com/Meghana7777777/Task-repo.git'
             }
         }
 
         stage('Install Dependencies') {
             steps {
+                echo 'Installing dependencies...'
                 sh 'npm install'
             }
         }
 
         stage('Build') {
             steps {
-                // If you have a build step (e.g., for a front-end app), include it here.
-                // For example, if you have a React app, you might do:
+                // Example: If you have a React app, you might run 'npm run build' here
+                echo 'Building application...'
                 // sh 'npm run build'
             }
         }
 
         stage('Create Dist Folder on EC2') {
             steps {
+                echo 'Creating dist folder on EC2...'
                 sh """
                 ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} ${SSH_USER}@${EC2_IP} << EOF
                 mkdir -p /home/${SSH_USER}/dist
@@ -41,6 +44,7 @@ pipeline {
 
         stage('Transfer Files to EC2') {
             steps {
+                echo 'Transferring files to EC2...'
                 sh """
                 scp -o StrictHostKeyChecking=no -i ${SSH_KEY} -r * ${SSH_USER}@${EC2_IP}:/home/${SSH_USER}/dist
                 """
@@ -49,6 +53,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                echo 'Deploying application on EC2...'
                 sh """
                 ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} ${SSH_USER}@${EC2_IP} << EOF
                 cd /home/${SSH_USER}/dist
