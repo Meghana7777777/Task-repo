@@ -23,10 +23,8 @@ pipeline {
         stage('Build') {
             steps {
                 // If you have a build step (e.g., for a front-end app), include it here.
-                script {
-                    // For example, if you have a React app, you might do:
-                    // sh 'npm run build'
-                }
+                // For example, if you have a React app, you might do:
+                // sh 'npm run build'
             }
         }
 
