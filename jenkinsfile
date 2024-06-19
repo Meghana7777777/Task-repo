@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        EC2_IP = '13.232.192.172'
+        EC2_IP = '3.110.168.92'
         SSH_USER = 'ubuntu'
-        SSH_KEY = credentials('Practice-key.pem') // Replace with your Jenkins credential ID for the SSH private key
+        SSH_KEY = credentials('Practice-key')  // Ensure 'Practice-key' is the ID of the SSH key credential stored in Jenkins
     }
 
     stages {
@@ -19,20 +19,46 @@ pipeline {
                 sh 'npm install'
             }
         }
-        
-        stage('Deploy to EC2') {
+
+        stage('Build') {
             steps {
+                // If you have a build step (e.g., for a front-end app), include it here.
                 script {
-                    sh """
-                    ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} ${SSH_USER}@${EC2_IP} <<EOF
-                    cd /home/ubuntu/nodejs || { mkdir -p /home/ubuntu/nodejs && cd /home/ubuntu/nodejs; }
-                    git pull origin deploy
-                    npm install
-                    pm2 restart all || pm2 start tblItemController.js
-                    exit
-                    EOF
-                    """
+                    // For example, if you have a React app, you might do:
+                    // sh 'npm run build'
                 }
+            }
+        }
+
+        stage('Create Dist Folder on EC2') {
+            steps {
+                sh """
+                ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} ${SSH_USER}@${EC2_IP} << EOF
+                mkdir -p /home/${SSH_USER}/dist
+                exit
+                EOF
+                """
+            }
+        }
+
+        stage('Transfer Files to EC2') {
+            steps {
+                sh """
+                scp -o StrictHostKeyChecking=no -i ${SSH_KEY} -r * ${SSH_USER}@${EC2_IP}:/home/${SSH_USER}/dist
+                """
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh """
+                ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} ${SSH_USER}@${EC2_IP} << EOF
+                cd /home/${SSH_USER}/dist
+                npm install
+                pm2 start npm --name "node_sql" -- start
+                exit
+                EOF
+                """
             }
         }
     }
