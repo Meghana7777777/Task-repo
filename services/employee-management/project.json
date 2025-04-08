@@ -1,0 +1,26 @@
+{
+  "name": "employee-management",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "services/employee-management/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "employee-management:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "employee-management:build:development"
+        },
+        "production": {
+          "buildTarget": "employee-management:build:production"
+        }
+      }
+    }
+  }
+}

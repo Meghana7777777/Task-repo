@@ -1,0 +1,28 @@
+{
+  "name": "leave-management",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "services/leave-management/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "leave-management:build",
+        "runBuildTargetDependencies": false
+        
+      },
+      "cache": false,
+      "configurations": {
+        "development": {
+          "buildTarget": "leave-management:build:development"
+        },
+        "production": {
+          "buildTarget": "leave-management:build:production"
+        }
+      }
+    }
+  }
+}

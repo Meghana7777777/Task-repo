@@ -1,0 +1,52 @@
+.card {
+    padding: 0.5rem 0.9rem;
+    background-color: #fff;
+    box-shadow: 1px 8px 10px rgba(0.3, 0.3, 0.3, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .card.total-count {
+    background-color: #0ec3e7;
+  }
+  
+  .card.total-active {
+    background-color: #11c311;
+    color: white;
+  }
+  
+  .card.total-inactive {
+    background-color: #f42e0b;
+    color: white;
+  }
+  
+  .card.total-employees {
+    background-color: #d44de3;
+    color: white;
+  }
+
+  .card.total-workers {
+    background-color: #4a3bef;
+    color: white;
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit;
+  }
+  
+  .data {
+    font-size: 20px;
+    font-weight: 500;
+    color: inherit;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  

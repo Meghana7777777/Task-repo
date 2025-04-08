@@ -1,0 +1,92 @@
+.scroll-container {
+    max-height: 80vh;
+    overflow-y: auto; /* Changed to auto for better usability */
+    padding: 20px; /* Increased padding for better spacing */
+    background-color: #edf3f5;
+    border-radius: 12px; /* Slightly larger border radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 8px; /* Custom scrollbar width */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+}
+
+.card-item {
+    transition: transform 0.3s ease, z-index 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    background-color: #2a4e6f;
+    border-radius: 12px; /* Slightly larger border radius */
+    height: 160px;
+    padding: 15px; /* Added padding for content */
+    position: relative; /* For z-index to work */
+}
+
+.card-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    z-index: 10; /* Bring the card to the front */
+    opacity: 1; /* Ensure it is fully visible */
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between header and content */
+}
+
+.card-header h1 {
+    margin-left: 8px; /* Space between badge and text */
+    font-size: 20px; /* Adjusted font size */
+}
+
+.card-content {
+    color: #fff;
+    margin-top: -12px;
+    font-size: 18px; /* Adjusted font size */
+}
+
+.card-content strong {
+    font-weight: bold;
+}
+
+.tag {
+    background-color: #4CAF50; /* Default tag color */
+    border-radius: 50px;
+    padding: 10px 20px; /* Adjusted padding */
+    font-size: 18px; /* Adjusted font size */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.card-item.past {
+    animation: fadeOut 0.5s forwards;
+}
+
+.card-item.upcoming {
+    animation: fadeIn 0.5s forwards;
+}

@@ -1,0 +1,20 @@
+export class WhatsAppLogDto{  
+    contactNo:string
+    templateName:string
+    projectName:string
+    companyId:number;   
+    moduleId:number;
+    constructor(
+        contactNo:string,
+        templateName:string,
+        projectName:string,
+        companyId:number,  
+        moduleId:number
+    ){
+        this.contactNo=contactNo;
+        this.templateName=templateName;
+        this.projectName=projectName;
+        this.companyId=companyId;
+        this.moduleId=moduleId;
+    }
+}

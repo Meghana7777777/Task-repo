@@ -1,0 +1,26 @@
+{
+  "name": "masters",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "services/masters/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "masters:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "masters:build:development"
+        },
+        "production": {
+          "buildTarget": "masters:build:production"
+        }
+      }
+    }
+  }
+}

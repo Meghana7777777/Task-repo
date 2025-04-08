@@ -1,0 +1,4 @@
+export enum TypeEnum {
+    RECURRING = 'RECURRING',
+    NONRECURRING = 'NONRECURRING'
+}

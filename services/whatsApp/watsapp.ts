@@ -1,0 +1,8 @@
+export const whatsApp = {
+    'UsageReport':'919246649070-1615282910@g.us',
+    'VERSION': 'v19.0',
+    'PHONE_NUMBER_ID': '437711296082941',
+    'ACCESS_TOKEN':'EAAPlWQYnjvkBO3nJuYbGL6Afc6AKwCt3wz4vp4LD6XSMAWwQkgOeCaDcObuHzbkW4z8QSXUZCO1CvMzVCZBTAtpTZA0sIinwZCPcKBiZCQf4YukEAQ9LB5a6ofpQO4oSmGbBZCzRq2T2GRPYZCo3BAguGhmv9NfrZAaFOZByNUVjoVRExpG2SgROsinlVIM5FJzqUehtG3QfjHeLW7MXM',
+    'contacts':['919581033709']
+}
+export default whatsApp;

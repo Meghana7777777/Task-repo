@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 420;
+  letter-spacing: .02em;
+  margin: 0;
+  font-family: "InterVariable", "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey;  */
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: #0dc7c7;  */
+  background: white
+}
+
+
+
+.ant-descriptions-row .ant-descriptions-item-label {
+  width: 14%;
+}
+
+.ant-descriptions-row .ant-descriptions-item-content {
+  width: 15%;
+}
+
+.desc .ant-descriptions-item-label {
+  width: 28%;
+}
+
+.desc .ant-descriptions-item-content {
+  width: 25%;
+}
+
+
+@keyframes blinkBorder {
+  0% {
+    border-color: red;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: red;
+  }
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/*-------------------------------------Leave Apply Form------------------------------------------- */
+
+.shine {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.shine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 500%;
+  height: 500%;
+  background: linear-gradient(80deg, #ffffff00 45%, #ffffff 50%, #ffffff00 55%);
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  animation: diagonal-line-shine 3s infinite linear;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+@keyframes diagonal-line-shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/*-------------------------------------------------------------------------------- */

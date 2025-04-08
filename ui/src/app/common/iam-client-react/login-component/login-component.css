@@ -1,0 +1,256 @@
+.bg-img {
+    /* background-image:
+        url('../../../images/img3.jpg'); */
+    background-size: cover;
+    /* opacity: 0.8; */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.imgcontainer h2{
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    /* background: none;   */
+    background: linear-gradient(to right, #1cc91c,rgb(84, 128, 241),rgb(217, 48, 191)); 
+    /* background-size: 200% auto; */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    overflow: visible;
+    animation: shine 1s linear infinite;
+}
+
+.bg-img:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    padding: 60px 32px;
+    width: 370px;
+    transform: translate(-50%, -50%);
+    background: #e0deee;
+    /* rgba(255, 255, 255, 0.04); */
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 25px;
+}
+
+.login header {
+    color: white;
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 35px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login {
+    color: white;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flip-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+
+  
+  .front-main,
+  .back-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+  }
+  
+  x .slick-slider>div {
+    margin: 0 10px;
+  }
+  
+  .logo {
+    /* background-image: url('../../iam-client-react/login-component-images/shortlogo.png'); */
+    background-size: 220px;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-position-x: -10px;
+    /* background-blend-mode: darken; */
+    /* opacity: 0.5; */
+  }
+  
+  
+  
+  .custom-placeholder::placeholder {
+    color: white;
+    opacity: 0.8;
+  }
+  
+  .custom-placeholder::-ms-input-placeholder {
+    color: white;
+    opacity: 0.8;
+  }
+  
+  .custom-placeholder::-webkit-input-placeholder {
+    color: white;
+    opacity: 0.8;
+  }
+  
+  .custom-placeholder input::placeholder {
+    color: white;
+    opacity: 0.8;
+  }
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+  }
+  .custom-form-item {
+    margin-bottom: 0;
+}
+
+.custom-input .ant-input  {
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(112, 144, 119);
+    /* border-radius: 0; */
+    /* height: 45px; */
+    /* color: rgb(217, 226, 220); */
+    transition: border-bottom-color 0.3s ease;
+ 
+    padding: 0px;
+}
+
+.custom-input .ant-input:hover,
+.custom-input .ant-input:focus {
+    border-bottom-color: dodgerblue;    
+    background: transparent;    
+    color: #000;
+}
+
+.custom-input .ant-input::placeholder {
+    
+    /* color: white; */
+}
+.custom-input .ant-input-outlined:focus {
+  box-shadow: none;
+}
+.ant-carousel .login-c  .slick-dots li button {
+  background: #000 !important;
+}
+
+.button-style {
+  background: linear-gradient(45deg, #7a6bcc, #9b88e2);
+  height: 30px; 
+  font-size: 16px; 
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button-64 {
+  width: "260px";
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}

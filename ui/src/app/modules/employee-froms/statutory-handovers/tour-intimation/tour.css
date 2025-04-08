@@ -1,0 +1,12 @@
+.custom-select .ant-select-selector {
+    border: none !important; 
+    background-color: transparent !important; 
+    box-shadow: none !important; 
+  }
+  .custom-select .ant-select-focused .ant-select-selector {
+    border: none !important; 
+    box-shadow: none !important; 
+  }
+  .custom-select .ant-select-arrow {
+    color: inherit; 
+  }

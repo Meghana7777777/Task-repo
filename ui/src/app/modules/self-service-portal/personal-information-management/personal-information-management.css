@@ -1,0 +1,20 @@
+.ant-descriptions-row .ant-descriptions-item-label {
+    width: 14%;
+}
+
+.ant-descriptions-row .ant-descriptions-item-content {
+    width: 15%;
+}
+
+.singleRow .ant-descriptions-row .ant-descriptions-item-label {
+    width: 14%; 
+    font-weight: bold;
+}
+
+.singleRow .ant-descriptions-row .ant-descriptions-item-content {
+    width: 43.8%; 
+}
+
+.singleRow .ant-descriptions-item[span="3"] .ant-descriptions-item-content {
+    width: 100%; 
+}

@@ -1,0 +1,39 @@
+.log-card.sidebar-card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 15px;
+  }
+  
+  .log-card.sidebar-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+  .content {
+    flex: 1;
+  }
+
+  .log-info {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  .date-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .date-time .log-info {
+    flex: 1;
+    font-size: 1rem;
+    margin: 0;
+    color: #555;
+  }
+  

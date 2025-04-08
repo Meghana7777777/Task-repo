@@ -1,0 +1,74 @@
+.ant-pro-sider-collapsed-button {
+    position: absolute;
+    inset-block-start: 18px;
+    z-index: 101;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    border-radius: 40px;
+    inset-inline-end: -13px;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05), 0 1px 4px -1px rgba(25, 15, 15, 0.07), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+:where(.css-dev-only-do-not-override-5wsri9).ant-typography {
+    color: rgb(255, 255, 255);
+    word-break: break-word;
+    line-height: 1.5714285714285714;
+}
+
+.ant-menu-light.ant-menu-submenu-popup>.ant-menu, .ant-menu-light>.ant-menu.ant-menu-submenu-popup>.ant-menu {
+    background-color: #047595 !important
+}
+
+.ant-menu-light.ant-menu-submenu-popup>.ant-menu, .ant-menu-light>.ant-menu.ant-menu-submenu-popup>.ant-menu {
+    background-color: #047595 !important
+}
+
+.ant-menu {
+    font-size: small !important;
+    font-weight: bold !important
+}
+
+:where(.css-5wsri9).ant-typography {
+    color: rgb(242 255 0 / 88%);
+    word-break: break-word;
+    line-height: 1.5714285714285714;
+}
+
+.ant-pro-base-menu-inline-item-title:not(:has(.anticon)):not(:has(a)) {
+    color: #d5f0a7  !important; 
+}
+/* .ant-pro-base-menu-inline-item-title::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.ant-pro-base-menu-inline-item-title:not(:has(.anticon)):not(:has(a))::before {
+    background-image: url('change.png'); 
+}
+
+.menu-item-employee::before {
+    background-image: url('employee-management.png');
+}
+
+.menu-item-attendance::before {
+    background-image: url('attendance-management.png');
+} */
+
+.ant-table-row:hover {
+    color: rgb(0, 0, 0);
+}
+
