@@ -5,6 +5,7 @@ pipeline {
         PATH = "${WORKSPACE}/node_modules/.bin:$PATH"
     }
     stages {
+        /*
         stage('Replace config-files ') {
             steps {
                 sh '''
@@ -18,6 +19,7 @@ pipeline {
                 '''
             }
         }
+        */
         stage('Check Node Version') {
             steps {
                 sh 'node -v'
