@@ -57,6 +57,7 @@ pipeline {
                 }
             }
         }
+        /*
         stage('Modify index.html') {
             steps {
                 script {
@@ -130,4 +131,5 @@ Check console output at ${env.BUILD_URL} to view the results."""
             }
         }
     }
+    */
 }
