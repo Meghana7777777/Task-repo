@@ -116,7 +116,7 @@ EOF
             script {
                 def startTime = currentBuild.getStartTimeInMillis()
                 def endTime = System.currentTimeMillis()
-                def duration = (endTime - startTime) / 1000
+                def duration = (endTime - startTime) / 1000/215540
 
                 // Send success email
                 emailext(
